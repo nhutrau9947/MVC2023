@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Style/Stylesheet1.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="header_top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <span class="email"><i class="fa fa-envelope"></i>nhut@gmail.com</span>
+                    <span class="email"><i class="fa fa-phone"></i>07041459947</span>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <ul class="menu-fast">
+                        <li>
+                            <a><i class="fa fa-user"></i>Tài khoản</a>
+                            <a><i class="fa fa-heart"></i>Yêu thích</a>
+                            <a><i class="fa fa-sign-out-alt"></i>Thanh toán</a>
+                            <a><i class="fa fa-sign-out-alt"></i>Đănng kí</a>
+                            <a><i class="fa fa-user"></i>Đăng nhập</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
+

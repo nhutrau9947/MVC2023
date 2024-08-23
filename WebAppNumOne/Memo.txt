@@ -1,0 +1,9 @@
+﻿ Bài 31  Phân quyền
+b1 Tạo bảng trong db
+ - lưu các chức năng trong poject 
+ - Phân quyền: Giao chức năng cho tài khoản
+ 
+b2 Update entity, viet map phan quyen, them ham chuc nang phan quyen
+b3 Viết hàm kiểm tra phân quyền
+
+Bài 32 Làm giao diện phân quyền

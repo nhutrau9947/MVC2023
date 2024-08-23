@@ -1,0 +1,92 @@
+﻿@model IEnumerable<DATA.Entity.Khachhang>
+
+@{
+    ViewBag.Title = "Danh sach khach hang";
+    Layout = "~/Areas/Admin/Views/Shared/layout-admin.cshtml";
+}
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h3 class="m-0 font-weight-bold text-primary">
+            Danh sach
+            <a href="~/Admin/QuanLyKhachHang/ThemMoi" style="float:right">Thêm mới</a>
+        </h3>
+    </div>
+    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" method="post">
+        <div class="input-group p-3 ">
+            <input name="TimKiem" type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                   aria-label="Search" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-search fa-sm"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>
+                            STT
+                        </th>
+                        <th>
+                            Tên Khách Hàng
+                        </th>
+                        <th>
+                            Ngày Sinh
+                        </th>
+                        <th>
+                            Địa Chỉ
+                        </th>
+                        <th>
+                            Năm Sinh
+                        </th>
+                        <th>
+                            Số Tiền
+                        </th>
+                        <th>
+                            Tình Trạng
+                        </th>
+                        <th>
+                            <label>#</label>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ID)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.TenKhachHang)
+                            </td>
+                            <td>
+                                @string.Format("{0:dd-MM-yyyy}", item.NgaySinh)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Diachi)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.NamSinh)
+                            </td>
+                            <td>
+                                @string.Format("{0:#,0.##}", item.SoTien)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Active)
+                            </td>
+                            <td>
+                                <a href="~/Admin/QuanLyKhachHang/CapNhat?ID=@item.ID" style="color:blue">Sửa</a><br />
+                                <a href="~/Admin/QuanLyKhachHang/Xoa?ID=@item.ID" style="color:red">Xóa</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

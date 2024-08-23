@@ -1,0 +1,16 @@
+﻿@model List<WebAppNumOne.Models.Data>
+
+@{ 
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+    <div> 
+        @ViewBag.TuiA
+        <br />
+        @ViewData["Nhut"]
+    </div>
+    <div>
+        @foreach(var item in Model)
+        {
+            <p>@item.Title ,@item.Des  </p>
+        }
+    </div>

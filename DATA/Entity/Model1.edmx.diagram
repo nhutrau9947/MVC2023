@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fee0d02ce45448f2a49d0507a26bbac9" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="KhachHangModel.ChucNang" Width="1.5" PointX="2.625" PointY="0.875" />
+        <EntityTypeShape EntityType="KhachHangModel.Khachhang" Width="1.5" PointX="2.75" PointY="3" />
+        <EntityTypeShape EntityType="KhachHangModel.NhanVien" Width="1.5" PointX="5" PointY="3.25" />
+        <EntityTypeShape EntityType="KhachHangModel.PhanQuyen" Width="1.5" PointX="4.875" PointY="0.75" />
+        <EntityTypeShape EntityType="KhachHangModel.sysdiagrams" Width="1.5" PointX="7.625" PointY="0.625" />
+        <EntityTypeShape EntityType="KhachHangModel.Taikhoan" Width="1.5" PointX="0.875" PointY="3" />
+        <AssociationConnector Association="KhachHangModel.FK_PhanQuyen_ChucNang" />
+        <AssociationConnector Association="KhachHangModel.FK_PhanQuyen_Taikhoan" />
+        <AssociationConnector Association="KhachHangModel.FK_PhanQuyen_ChucNang" />
+        <AssociationConnector Association="KhachHangModel.FK_PhanQuyen_Taikhoan" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

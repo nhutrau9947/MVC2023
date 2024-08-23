@@ -1,0 +1,94 @@
+﻿@model WebAppNumOne.Models.KhachHang
+@{
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<div class="container">
+    <form action="~/home/formkhachhang" method="post">
+        <p>
+            <label>Ho va Ten</label>
+            <input name="HovaTen" value="@Model.HovaTen" />
+        </p>
+        <p>
+            <label>Ngay Sinh</label>
+            <input name="NgaySinh" type="date" value="@string.Format( "{0:yyyy/MM/dd}",Model.NgaySinh)" />
+        </p>
+        <p>
+            <label>Dia chi</label>
+            <input name="Diachi" type="text" value="@Model.Diachi" />
+        </p>
+        <p>
+            <label>CCCD</label>
+            <input name="CCCD" type="text" value="@Model.CCCD" />
+        </p>
+        <p>
+            <label>Gioi tinh</label>
+            <select name="Gioitinh">
+                <option value="Nam" @(Model.Gioitinh == "Nam" ? "selected" : "")>Nam</option>
+                <option value="Nu" @(Model.Gioitinh == "Nu" ? "selected" : "")>Nu</option>
+                <option value="Khac" @(Model.Gioitinh == "Khac" ? "selected" : "")>Khac</option>
+            </select>
+        </p>
+        <p>
+            <label>Chung chi</label>
+            <input name="Chungchi" type="checkbox" value="T anh" />T anh
+            <input name="Chungchi" type="checkbox" value="T nhat" />T nhat
+        <p>
+            <button>Submit</button>
+        </p>
+    </form>
+    @if (Model != null)
+    {
+        <ul>
+            <li>
+                Chungchi:
+
+                @foreach (var item in Model.Chungchi ?? new string[] { })
+                {
+                    <span>@item</span>
+                }
+
+            </li>
+            @*@if (Model.Chungchi != null)
+                {
+                    <li>
+                        Chungchi:
+                        @foreach (var item in Model.Chungchi)
+                        {
+                            <span>@item</span>
+                        }
+                    </li>
+                }*@
+            <li>HovaTen:@Model.HovaTen</li>
+            <li>NgaySinh:@Model.NgaySinh</li>
+            <li>Namsinh:@Model.Namsinh</li>
+            <li>Diachi:@Model.Diachi</li>
+            <li>Gioitinh:@Model.Gioitinh</li>
+            <li>CCCD:@Model.CCCD</li>
+            <li>SDT:@Model.SDT</li>
+            <li>Email:@Model.Email</li>
+            <li>NgaySinh:@Model.NgaySinh</li>
+        </ul>
+    }
+    @{
+        int i = 1;
+    }
+    <table>
+        <tr>
+            <th>TT</th>
+            <th>Ho ten</th>
+            <th>Ngay sinh</th>
+            <th>Dia chi</th>
+            <th>CCCD</th>
+        </tr>
+        @foreach (var item in WebAppNumOne.Models.Sokhachhang.DS_KhachHang)
+        {
+            <tr>
+                <th>@(i++)</th>
+                <th>@item.HovaTen</th>
+                <th>@item.NgaySinh</th>
+                <th>@item.Diachi</th>
+                <th>@item.CCCD</th>
+            </tr>
+        }
+    </table>
+</div>
