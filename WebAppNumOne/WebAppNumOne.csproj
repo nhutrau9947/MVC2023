@@ -1781,7 +1781,6 @@
     <Content Include="Global.asax" />
     <Content Include="Style\Stylesheet1.css" />
     <Content Include="Memo.txt" />
-    <Content Include="TextFile1.txt" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -1790,6 +1789,7 @@
     <Compile Include="App_Start\Session1.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\DashboardController.cs" />
+    <Compile Include="Areas\Admin\Controllers\PhanQuyenController.cs" />
     <Compile Include="Areas\Admin\Controllers\QuanLyKhachHangController.cs" />
     <Compile Include="Areas\Admin\Controllers\UserController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -1986,6 +1986,7 @@
     <Content Include="Areas\Admin\Views\QuanLyKhachHang\CapNhat.cshtml" />
     <Content Include="Areas\Admin\Views\Dashboard\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Dashboard\Loiphanquyen.cshtml" />
+    <Content Include="Areas\Admin\Views\PhanQuyen\DanhsachTaiKhoan.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Home\TrangChu.cshtml" />
     <Content Include="Views\Home\Form.cshtml" />

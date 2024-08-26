@@ -7,3 +7,11 @@ b2 Update entity, viet map phan quyen, them ham chuc nang phan quyen
 b3 Viết hàm kiểm tra phân quyền
 
 Bài 32 Làm giao diện phân quyền
+
+BÀI 36 Ứng dụng javascript
+1. Post lên server dữ liệu dạng json
+2. Get json server và hiện thị lên giao diện 
+3. Get patial append vào 1 vùng nào đấy.
+
+
+

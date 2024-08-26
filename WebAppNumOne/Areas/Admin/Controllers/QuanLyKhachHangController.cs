@@ -5,7 +5,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using DATA.Entity;
-using static DATA.mapKhachhang;
 using WebAppNumOne.App_Start;
 
 namespace WebAppNumOne.Areas.Admin.Controllers
@@ -40,8 +39,7 @@ namespace WebAppNumOne.Areas.Admin.Controllers
             }
 
         }
-
-
+        
         public ActionResult ThemMoi()
         {
             return View(new Khachhang() { NgaySinh = DateTime.Now, SoTien = 0});
